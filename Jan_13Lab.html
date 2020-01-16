@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <title>
+            Jan 13 Lab
+        </title>
+<style>
+    
+    #mainTable{
+        border: 2px solid #2F2D2E;
+        color: #2F2D2E;
+        border-spacing: 0;
+    }
+    
+    #mainText{
+        font-size: 10px;
+        font-family: Arial;
+        color: black;
+    }
+    
+    bt{
+        font-size: 20px;
+        font-family: Arial;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+    </head>
+        <body>
+            <form onreset="ResetForm()" onsubmit="SubmitForm()">
+            <center>
+                <br>
+                <br>
+                <br>
+                    <div id="mainText">
+                        <table id="mainTable">
+                            <tr>
+                                <td bgcolor="#2F2D2E" width="400">
+                                    <bt>
+                                        Event
+                                    </bt>
+                                </td>
+                                <td bgcolor="#2F2D2E" width="400">
+                                    <bt>
+                                        Description
+                                    </bt>
+                                </td>
+                                <td bgcolor="#2F2D2E" width="400">
+                                    <bt>
+                                        Expected Result
+                                    </bt>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    onblur
+                                </td>
+                                <td width="400">
+                                    <p>This event will happen after the user loses focus of the input box</p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                                     <input type="text" id="fname" onblur="upperCase()"
+                                     placeholder="Enter Text">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onchange
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                                   Triggered when the value of an element changes
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                                <select id="MyList" onchange="RLUD()">
+  <option value="Right">Right</option>
+  <option value="Left">Left</option>
+  <option value="Up">Up</option>
+  <option value="Down">Down</option>
+</select>
+<p id="OptionList"></p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        oncontextmenu
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                activates when the user right-clicks on an element to bring up the context menu
+                                    </p>
+                                </td>
+                                <td width="400">
+                                <div oncontextmenu="contextMenu()" contextmenu="mymenu">
+                        <p>Right-click inside this box to see the context menu!
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onfocus
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                This event will trigger after the user focuses on the input box
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Enter your name: <input type="text" onfocus="Focus(this)" placeholder="Enter Text">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        oninput
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                        Triggers when the user gives enters something into an input field
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                <input type="text" id="myInput" oninput="inputFunction()">
+                <p id="InputText"></p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        oninvalid
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                        Triggers when a submittable element is invalid
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                  Name: <input type="text" oninvalid="alert('You must fill out the form!');" name="fname" required>
+  <input type="submit" value="Submit">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onreset
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Triggers when a form is reset
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+        Enter name: <input type="text">
+  <input type="reset">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onsearch
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Activates when the user presses the "Enter" key while in a search input field
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                <input type="search" id="myInput" onsearch="SearchField()">
+                <p id="SF"></p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onselect
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Triggers after text has been selected in an element
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Select some of the text: <input type="text" value="Hello world!" onselect="TextSelect()">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="400">
+                                    <p>
+                                        onsubmit
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Activates when the form gets submitted
+                                    </p>
+                                </td>
+                                <td width="400">
+                                    <p>
+                Enter name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+                                    </p>
+                                </td>
+                            </tr>
+                </table>
+            </div>
+        </center>
+        </form>
+        <script>
+            function upperCase() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+function RLUD() {
+  var x = document.getElementById("MyList").value;
+  document.getElementById("OptionList").innerHTML = "You selected: " + x;
+}
+
+function contextMenu() {
+  alert("You right-clicked inside the div!");
+}
+function Focus(x) {
+  x.style.background = "lightblue";
+}
+function inputFunction() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("InputText").innerHTML = "You wrote: " + x;
+}
+function ResetForm() {
+  alert("The form was reset");
+}
+function SearchField() {
+   var x = document.getElementById("myInput");
+   document.getElementById("SF").innerHTML = "You are searching for: " + x.value;
+}
+function TextSelect(){
+  alert("You selected some text!");
+}
+function SubmitForm() {
+  alert("The form was submitted");
+}
+        </script>
+    </body>
+</html>

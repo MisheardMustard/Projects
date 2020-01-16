@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        
+    <link rel="shortcut icon" href="littleclock2.png" type="image/png">
+        
+    <style>
+        #txt{
+            font-size: 150px;
+            font-family: arial;
+            color: #9a12b3;
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+            transition: .2s;
+            }
+
+            .hov{
+                transition: transform .2s;
+            }
+            
+            .hov:hover{
+                color: #2F5EE4 !important;
+                transform: scale(1.05, 1.05);
+            }
+            
+
+    </style>
+    </head>
+    <body onload="startTime()">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <table align="center">
+            <tr>
+                <td>
+                    <div id="txt" class="hov"></div>
+                </td>
+            </tr>
+        </table>
+
+        
+        
+        <script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+}
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};
+        return i;
+}
+        </script>
+    </body>
+</html>

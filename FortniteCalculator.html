@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<!--This is the work of MisheardMustard-->
+  <head>
+    <title>
+      Fortnite Calculator - Brendan Lendino
+    </title>
+    <style>
+    #ABC {
+      background-color: #2F2D2E;
+      height: 23%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index:-1;
+      box-shadow: 1px 1px 2px black;
+    }
+    .placeholder{
+      color: lightgrey;
+    }
+    #kills, #place{
+      font-size: 30px;
+      border: none;
+    }
+    #scr{
+      font-size: 50px;
+      color: #2F2D2E;
+      font-weight: bold;
+      font-family: Arial;
+      border: none;
+      width: 100px;
+    }
+    #calculate, #reset {
+      border: none;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      font-family: Arial;
+      padding: 10px;
+      background-color: #2F2D2E;
+    }
+    line {
+      display: block;
+      height: 3px;
+      border: 0;
+      border-top: 2px solid #2F2D2E;
+      margin: 1em 0;
+      padding: 0;
+      width: 1250px;
+      
+    }
+    #solos, #duos, #squads {
+    display: inline-block;
+    border: 0px solid #000000;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 1px 1px ;
+    background-color: #2F2D2E;
+    transform: skew(-25deg);
+    width: 200px;
+    height: 65px;
+    }
+    .textso, .textdu, .textsq{
+      transform: skew(25deg);
+    }
+  .zoom {
+  transition: transform .2s;
+    }
+  .zoom:hover {
+  transform: scale(1.09, 1.09);
+    }
+    </style>
+  </head>
+  <body>
+    <form>
+    <center>
+    <div style="color: white; font-family: Arial; font-weight: bold; font-size: 75px; transform: scale(.75, 1.05);">
+        FORTNITE
+    </div>
+    <div style="color: white; font-family: Arial; Font-weight: bold; font-size: 55px; transform: scale(1.00, .90);
+    font-size: 50px;">
+      SCORE CALCULATOR
+    </div>
+    </center>
+    <br>
+    <table border="0">
+      <tr>
+        <td width="475">
+    <img src="EpicGamesLogo.jpeg" usemap="#image_map" width="100" height="120">
+<map name="image_map">
+  <area alt="EpicGamesWebsite" title="EpicGamesWebsite" href="https://www.epicgames.com" coords="1,1,137,270" shape="rect">
+</map>
+        </td>
+        <td width="175">
+        <div style="color: #2F2D2E; font-family: Arial; Font-weight: bold; font-size: 40px;">
+            KILLS:
+        </div>
+        </td>
+        <td align="center">
+    <input type="number"
+    ID="kills"
+    placeholder="Kills"
+    maxlength="2">
+        </td>
+      </tr>
+      <tr>
+        <td width="475">
+        </td>
+        <td width="175">
+        <div style="color: #2F2D2E; font-family: Arial; Font-weight: bold; font-size: 40px;">
+            PLACE:
+        </div>
+        </td>
+        <td align="center">
+    <input type="number"
+    ID="place"
+    placeholder="1-100"
+    maxlength="2">
+        </td>
+      </tr>
+    </table>
+    <br>
+    <center><input type="text" id="scr" readonly>
+    </center>
+    <br>
+    <center>
+    <table border="0">
+      <tr>
+        <td>
+          <div class="zoom"><button type="button" ID="calculate" onclick="errorcheck()">Calculate</button></div>
+        </td>
+      </tr>
+    </table>
+    <br><br><br>
+    <table border="0" cellpadding="10px">
+      <tr>
+        <td>
+    <div class="zoom"><button type="button" ID="solos" onclick="errorcheck()"><div class="textso">Solos</div></button></div>
+    </td>
+    <td>
+        <div class="zoom"><button type="button" ID="duos" onclick="errorcheck()"><div class="textdu">Duos</div></button></div>
+        </td>
+        <td>
+            <div class="zoom"><button type="button" ID="squads" onclick="errorcheck()"><div class="textsq">Squads</div></button></div>
+        </td>
+      </tr>
+    </table>
+    </center>
+    <br>
+    </form>
+    <br>
+    <center><line/>
+      <b>
+        <div style="color: #666666; font-family: Arial; font-size: 15px;">
+        <br>
+     © 2019 MisheardMustard. All rights reserved.
+     <br>
+     <br>
+     misheardmustard@gmail.com | Trademarks used on this website are the property of their respective owners.
+     </div>
+     </b>
+     </center>
+     <br>
+     <br>
+     <br>
+     <br>
+     <p> </p>
+    <section id="ABC">
+<script type="text/javascript">
+function errorcheck() {
+  var kills = document.getElementById("kills").value;
+  var place = document.getElementById("place").value;
+  
+  
+  
+  var x =  place -  101;
+  var y =  kills *   -5;
+  var score = -y +   -x;
+  
+  
+  
+  if(kills<0 || place<0) {
+    alert("Error: Invalid Input");
+  }
+  else if(score<2) {
+    alert("Error: Invalid Input");
+  }
+  else if(score>595) {
+    alert("Error: Invalid Input");
+  }
+  else {
+    document.getElementById("scr").value = score;
+  }
+}
+</script>
+  </body>
+</html>

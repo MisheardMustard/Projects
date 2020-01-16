@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <title>
+      Brendan Bank
+        </title>
+          <style>
+  #ABC {
+    background-color: #2F2D2E;
+    height: 23%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:-1;
+    box-shadow: 1px 1px 2px black;
+  }
+  #Withdraw_Amt{
+    font-size: 30px;
+    border: 2px solid #2F2D2E;
+    color: #2F2D2E;
+  }
+  #Current_Blnc{
+    font-size: 35px;
+    color: #2F2D2E;
+    border: none;
+    text-align: center
+  }
+  #out{
+    font-size: 30px;
+    border: none;
+    width: 1000px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  #Withdraw, #deposit, #reset{
+    border: none;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial;
+    padding: 10px;
+    background-color: #2F2D2E;
+  }
+  line{
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 2px solid #2F2D2E;
+    margin: 1em 0;
+    padding: 0;
+    width: 1250px;
+  }
+  .textso, .textdu, .textsq{
+    transform: skew(25deg);
+  }
+  .zoom {
+    transition: transform .2s;
+  }
+  .zoom:hover {
+    transform: scale(1.09, 1.09);
+  }
+          </style>
+        </head>
+      <body>
+    <form>
+      <center>
+    <br>
+    <div
+    style="
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+    font-size: 70px;
+    ">Brendan Bank™
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--This is Brendan's code | All rights reserved-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div
+    style="
+    color: #2F2D2E;
+    font-family: Arial;
+    Font-weight: bold;
+    font-size: 40px;">
+            Amount:
+        </div>
+    <input type="number"
+    ID="Withdraw_Amt"
+    placeholder="">
+    <br>
+    <br>
+    <table>
+      <tr>
+    <td>
+    <div class="zoom"><button type="button" ID="withdraw" onclick="Check_withdraw()">Withdraw</button></div>
+        </td>
+        <td width="10">
+        <td>
+    <div class="zoom"><button type="button" ID="deposit" onclick="Check_deposit()">Deposit</button></div>
+        </td>
+        <td width="10">
+        </td>
+        <td>
+             <div class="zoom"><button type="reset" ID="reset">Reset</button></div>
+        </td>
+      </tr>
+    </table>
+    <br>
+        <div style="color: #2F2D2E; font-family: Arial; Font-weight: bold; font-size: 40px;">
+            Current Balance:
+        </div>
+    <input type="number"
+    ID="Current_Blnc"
+    placeholder=""
+    value = "1000"
+    readonly>
+    
+    <br>
+    <br>
+    <input type="text" id="out" readonly>
+    
+    </center>
+  </form>
+<script type="text/javascript">
+
+
+  function Check_withdraw(){   //main function
+  
+  /*Here I am pulling HTML elements in through their IDs as strings*/
+  
+    var string_1 = document.getElementById("Withdraw_Amt").value;
+    var string_2 = document.getElementById("Current_Blnc").value;
+    
+    /*converting the strings into numbers*/
+    
+    var Withdraw_Amount = parseInt(string_1, 10);
+    var Current_Balance = parseInt(string_2, 10);
+    
+    document.getElementById("out").value;
+    
+    function Check_withdraw2(x, y){  //second function
+      
+      /*this is if you try to take money out that you don't have in your account and gives an output accordingly*/
+      
+      if(x > y && x > 0){
+        
+      out.style.color = "#2F2D2E";
+        
+      out.value ="The requested amount exceeds what is available in your balance";
+      }
+      
+      /*checks if the withdraw amount is equal to the balance and gives an output accordingly*/
+      
+      else if(x == y){
+        
+      out.style.color = "#1fff35";
+        
+      out.value ="Withdraw successful";
+      Current_Blnc.value = Current_Balance - Withdraw_Amount;
+      }
+
+      /*checks if the withdraw amount is less than the balance and gives an output accordingly*/
+
+      else if(y > x && x > 0){
+      out.style.color = "#1fff35";
+      
+      out.value ="Withdraw successful";
+      Current_Blnc.value = Current_Balance - Withdraw_Amount;
+      }
+      
+      /*checks if you type in an invalid number and gives an input accordingly*/
+      
+      else if(x <= 0){
+        out.style.color = "#ff4c30";
+      
+        out.value = "Invalid request";
+      }
+      
+    }
+    
+    /*calling function with the input parameter values*/
+    
+    Check_withdraw2(Withdraw_Amount, Current_Balance);
+  }
+  
+  
+  
+  
+  
+  
+  
+  function Check_deposit(){   //main function
+  
+  /*Here I am pulling HTML elements in through their IDs as strings*/
+  
+    var string_1 = document.getElementById("Withdraw_Amt").value;
+    var string_2 = document.getElementById("Current_Blnc").value;
+    
+    /*converting the strings into numbers*/
+    
+    var Withdraw_Amount = parseInt(string_1, 10);
+    var Current_Balance = parseInt(string_2, 10);
+    
+    
+    function Check_deposit2(x, y){  //second function
+
+      document.getElementById("out").style.color = "#1fff35";
+      
+      document.getElementById("out").value ="Deposit successful";
+      document.getElementById("Current_Blnc").value = Current_Balance + Withdraw_Amount;
+      
+      /*checks if you type in an invalid number and gives an input accordingly*/
+      
+        if(x <= 0){
+        document.getElementById("out").style.color = "#ff4c30";
+      
+        document.getElementById("out").value = "Invalid request";
+      }
+      
+    }
+    
+    /*calling function with the input parameter values*/
+    
+    Check_deposit2(Withdraw_Amount, Current_Balance);
+  }
+    </script>
+    <center><line/>
+    <div style="color: #666666; font-family: Arial; font-size: 15px;">
+        <br>
+     © 2020 MisheardMustard. All rights reserved.
+     <br>
+     <br>
+     misheardmustard@gmail.com | Trademarks used on this website are the property of their respective owners.
+     </div>
+    </center>
+  <section id="ABC">
+  </body>
+</html>

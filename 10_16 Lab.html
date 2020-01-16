@@ -1,0 +1,693 @@
+<html>
+    <head>
+        <title>10/16 Lab</title>
+      <style>
+      #page1, #page2{
+          border-collapse: collapse;
+          border: 1px solid lightgrey; 
+          z-index:-1;
+          box-shadow: 2px 2px 4px grey;
+                }
+                
+      ::placeholder {
+          color: grey;
+          opacity: 1;
+                }
+        
+      #projectname, #projectname2{
+          border: 0px;
+          width: 600px;
+          height: 50px;
+          font-family: Arial;
+          font-size: 35px;
+          color: #000094;
+          font-weight: bold;
+                }
+                
+      input{
+          border: 0px;
+                }
+                
+      #VersionTable{
+          border: 2px solid black;
+          border-collapse: collapse;
+          height: 5px;
+          width: 600px;
+                }
+      #blank1{
+          border: 1px solid grey;
+          border-collapse: collapse;
+          width: 600px;
+          height: 5px;
+                }
+      #version1, #version2{
+          width: 72px;
+                }
+      #date1, #date2{
+          width: 75px;
+                }
+      #author1, #author2{
+          width: 115px;
+                }
+      #changedescription1,                     #changedescription2{
+          width: 325px;
+                }
+      line {
+          display: block;
+          height: 3px;
+          border: 0;
+          border-top: 2px solid black;
+          margin: 1em 0;
+          padding: 0;
+                }        
+     #tablesuccess1{
+         border: 1px solid black;
+         border-collapse: collapse;
+                }
+                
+     #success1, #success2, #success3{
+         width: 280px;
+                }
+     #factor1, #factor2, #factor3{
+         width: 370px;
+                }
+     </style>
+     </head>
+     <body bgcolor="lightgrey">
+        <br>
+        <br>
+        <form>
+        
+        
+        <!-- FIRST PAGE -->
+        <center>
+        <table 
+        border="1" 
+        width="900" 
+        height="1100"                             bgcolor="white"
+        cellpadding="100"
+        ID="page1">
+        
+        <tr>
+        <td     
+         valign="top"> 
+   <input 
+    type="text"
+    ID="projectname"
+    placeholder="Project Name">
+   <br>           
+   <b><font 
+       face="Arial" 
+       size="5" 
+       color="#000094">
+    Project Lessons Learned
+      </font></b>
+      <br>
+       <br>
+                  <table border="0">
+                      <tr>
+                          <td width="300">
+                  <b>Department:</b>
+                  <input 
+               type="text"
+               placeholder="Department">
+                          </td>
+                                                                    <td>
+                  <b>Document Owner:</b>
+                  <input 
+                   type="text"
+                   placeholder="Document Owner">
+                          </td>
+                      </tr>
+                                            <tr>
+                          <td>
+                  <b>Focus Area:</b>
+                  <input 
+                   type="text"
+                   placeholder="Focus Area">
+                   
+                          </td>
+                                                                    <td>
+                  <b>Project or Organization Role:</b>
+                  <input 
+                  type="text"
+                  placeholder="Project or Organization Role">
+                          </td>
+                      </tr>
+
+                  </table>
+                  
+                  
+                  
+                  <b>Product or Process:</b>
+                  <input 
+                   type="text"
+                   placeholder="Product or Process">
+                  <br><br>
+                  <table 
+                  border="1"
+                  ID="VersionTable"
+                  bgcolor="#CCCCFF">
+                      <tr>
+                          <td>
+                              <b>
+                              Version    
+                              </b>
+                          </td>
+                          <td 
+                          width="75"
+                          align="left"><b>
+                              Date
+                              </b></td>
+                      <td
+                      width="115"
+                      align="left"><b>
+                          Author
+                          </b>
+                          </td>
+                                                             
+                      <td
+                      width="325"
+                      align="left"><b>
+                          Change Description
+                          </b>
+                          </td>
+                      </tr>
+                  </table>
+                  <table 
+                  border="1"
+                  ID="blank1">
+                      <tr>
+                          <td>
+                          <input type="text"
+ID="version1">
+                          </td>
+                          <td
+                          width="75"
+                          align="left">
+                              <input type="text"
+ID="date1">
+                          </td>
+                          <td
+                          width="115"
+                          align="left">                                 <input type="text"
+ID="author1">
+                          </td>
+                          <td
+                          width="325"
+                          align="left">
+                              <input type="text"
+ID="changedescription1">                                  </td>
+                      </tr>
+                      <tr>
+                                                    <td>
+                              <input type="text"
+ID="version2">
+                          </td>
+                          <td
+                          width="75"
+                          align="left">
+                              <input type="text"
+ID="date2">
+                          </td>
+                          <td
+                          width="115"
+                          align="left">                                 <input type="text"
+ID="author2">
+                          </td>
+                          <td
+                          width="325"
+                          align="left">
+                              <input type="text"
+ID="changedescription2">
+                          </td>
+                      </tr>
+                      
+                  </table>
+                  <br>
+                  <br>
+                  <b><font 
+                  size="4"
+                  face="Arial"
+                  color="00007F">
+   Lessons learned purpose and objectives 
+                  </font></b>
+                      <br>
+                      Throughout each project life cycle, lessons are learned and opportunities for improvement are discovered. As part of a continuous improvement process, documenting lessons learned helps the project team discover the root causes of problems that occurred and avoid those problems in later project stages or future projects. Data for this report was gathered by using Project Lessons Learned Record sheets and is summarized in the table. 
+                  
+                  <br>
+                  <br>
+                  The objective of this report is gathering all relevant information for better planning of later project stages and future projects, improving implementation of new projects, and preventing or minimizing risks for future projects.
+                  <br>
+                  <br>
+                  
+                  
+               <b><font 
+                  size="4"
+                  face="Arial"
+                  color="00007F">
+   Lessons learned questions 
+                  </font></b>  
+                  <br>
+                 <ul>
+                     <li>What worked well—or didn’t work well—either for this project or for the project team?
+                         <input type="text" placeholder="answer">
+                     <li>     What needs to be done over or differently? 
+                         <br>
+                         <input type="text" placeholder="answer">
+                     <li>     What surprises did the team have to deal with?
+                         <br>
+                         <input type="text" placeholder="answer">
+                     <li>     What project circumstances were not anticipated? 
+                         <br>
+                         <input type="text" placeholder="answer">
+                     <li>     Were the project goals attained? If not, what changes need to be made to meet goals in the future?
+                         <br>
+                         <input type="text" placeholder="answer">
+                  </ul>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                 <line/>
+                  <font
+                  size="3">
+                  <b>
+                      Confidential
+                  </b>
+                      <br>
+                  Projects lessons learned
+                      <br>
+                      Last printed 10/16/2019 8:24:00 AM 
+                  </font>
+                  
+              </td>
+          </tr>
+        </table>
+            
+           
+            
+            <br>
+            <br>
+            
+            <!-- SECOND PAGE -->
+        <center>
+        <table 
+        border="1"
+        width="900" 
+        height="1100" 
+        bgcolor="white"
+        ID="page2"
+        cellpadding="100">
+            
+            <tr>
+                <td
+                valign="top">
+                    
+                    
+<input 
+type="text"
+ID="projectname2"
+placeholder="Project Name">
+                    
+<br>
+        <b><font 
+           face="Arial" 
+           size="5" 
+           color="#000094">
+               Project Highlights
+               </font></b>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    
+               <b><font 
+                  size="4"
+                  face="Arial"
+                  color="00007F">
+   Top 3 Significant Project Successes  
+                  </font></b>
+                                                           <table 
+                  border="1"
+                  bgcolor="#CCCCFF"
+                  ID="tablesuccess1">
+                      <tr>
+                      <td
+                      width="280"
+                      align="left"><b>
+                          Project Success
+                          </b>
+                          </td>
+                      <td
+                      width="370"
+                      align="left"><b>
+Factors That Supported Success
+                          </b>
+                          </td>  
+                                                               </tr>
+                      <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                                                                                     <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success2">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor2">
+                          </td> 
+                                                               </tr>
+                                                               <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                      
+                  </table>
+                    <br>
+                    <br>
+                    
+                    
+                    
+                 <b><font 
+                  size="4"
+                  face="Arial"
+                  color="00007F">
+   Other Notable Project Successes  
+                  </font></b>
+                 <table 
+                  border="1"
+                  bgcolor="#CCCCFF"
+                  ID="tablesuccess1">
+                      <tr>
+                      <td
+                      width="280"
+                      align="left"><b>
+                          Project Success
+                          </b>
+                          </td>
+                      <td
+                      width="370"
+                      align="left"><b>
+Factors That Supported Success
+                          </b>
+                          </td>  
+                                                               </tr>
+                      <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                                                                                     <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success2">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor2">
+                          </td> 
+                                                               </tr>
+                                                               <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                      
+                  </table>
+                    <br><br>
+                            <b><font 
+           face="Arial" 
+           size="4" 
+           color="#00007F">
+      Project Shortcomings and Solutions
+               </font></b>
+                    <table 
+                  border="1"
+                  bgcolor="#CCCCFF"
+                  ID="tablesuccess1">
+                      <tr>
+                      <td
+                      width="280"
+                      align="left"><b>
+                          Project Shortcoming
+                          </b>
+                          </td>
+                      <td
+                      width="370"
+                      align="left"><b>
+Recommended Solutions
+                          </b>
+                          </td>  
+                                                               </tr>
+                      <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                                                                                     <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success2">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor2">
+                          </td> 
+                                                               </tr>
+                                                               <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                      <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                                                                                     <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success2">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor2">
+                          </td> 
+                                                               </tr>
+                                                               <tr>
+                      <td
+                      width="280"
+                      align="left">
+  <input
+  type="text"
+  ID="success1">
+                          </td>
+                      <td
+                      width="370"
+                      align="left">
+  <input
+  type="text"
+  ID="factor1">
+                          </td>                          
+                      </tr>
+                  </table>
+                    
+                    
+                    <br>
+                    <br>
+        <b><font 
+           face="Arial" 
+           size="4" 
+           color="#00007F">
+      Approvals
+               </font></b>                                   <br>
+                    <br>
+                    <table
+                    border="0">                    <tr>
+                        <td width="100">
+                    <b>Prepared by:</b>
+                        </td>
+                        <td>
+                    <input 
+                   type="text"
+                   placeholder="Project Manager">
+                        </td>                                  </tr>
+                        <tr>
+                        <td>
+                            <br>
+                        </td>
+            </tr>
+                    <tr>
+                        <td width="50">
+                    <b>Approved by:</b>
+                        </td>
+                        <td>
+                    <input 
+                   type="text"
+                   placeholder="Project Sponsor">
+                     </tr>
+                        <tr>
+                        <td>
+                            <br>
+                        </td>
+            </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        <td>
+                    <input 
+                   type="text"
+                   placeholder="Executive Sponsor">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                            </td>
+                           <td>
+                                                        <input 
+                   type="text"
+                   placeholder="Client Sponsor">
+
+                                </td>
+                     </tr>
+        </table>    
+                    <br>
+                    <br>
+                    <br>
+            <line/>
+                    <table
+                    border="0">
+                        <tr>
+                            <td width="300"><b>
+                                Confidential</b></td>
+                            <td width="310">
+                                Page 2
+                            </td>
+                            <td>
+                                10/16/2019
+                            </td>
+                        </tr>
+                    </table>
+         </center>
+            <br>
+            <br>
+            </form>
+    </body>
+</html>

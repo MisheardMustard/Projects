@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>
+            Date
+        </title>
+        
+        <style>
+            
+            #btn{
+                
+                font-family: Arial;
+                font-size: 50px;
+                background-color: #2F2D2E;
+                color: white;
+                border: 5px solid #2F2D2E;
+                padding: 35px;
+                text-align: center;
+                transition: .3s;
+                border-radius: 85px;
+                cursor: pointer;
+
+            }
+            
+            .hov{
+                transition: transform .2s;
+            }
+            
+            .hov:hover{
+                background-color: #E5E5E5 !important;
+                transform: scale(1.05, 1.05);
+                color: #2F2D2E !important;
+            }
+
+            #box{
+                border: none;
+                text-align: center;
+                z-index:-1;
+                box-shadow: 3px 3px 5px gray;
+                border-radius: 20px;
+            }
+
+        </style>
+        
+    </head>
+    <body bgcolor="">
+        <center>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <table id="box" height="400" width="800" bgcolor="#A9A9A9">
+                <tr>
+                    <td align="center">
+            <table>
+                <tr>
+            <td>
+            <button id="btn" onclick="DisplayDate()" class="hov">Click for Date</button></td></tr>
+            </table>
+            </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            
+            <div id="txt"></div>
+            
+        </center>
+        
+        <script>
+            function DisplayDate(){
+            var Day = new Date().getDate();
+            var Month = new Date().getMonth() +1;
+            var Year = new Date().getFullYear();
+            var DayOfWeek = new Date().getDay();
+            var DayName;
+            
+            if(DayOfWeek == 0)
+            {
+                DayName="Sunday, ";
+            }
+            else if(DayOfWeek == 1)
+            {
+                DayName="Monday, ";
+            }
+            else if(DayOfWeek == 2)
+            {
+                DayName="Tuesday, ";
+            }
+            else if(DayOfWeek == 3)
+            {
+                DayName="Wednesday, ";
+            }
+            else if(DayOfWeek == 4)
+            {
+                DayName="Thursday, ";
+            }
+            else if(DayOfWeek == 5)
+            {
+                DayName="Friday, ";
+            }
+            else if(DayOfWeek == 6)
+            {
+                DayName="Saturday";
+            }
+                alert(DayName + Month + "/" + Day + "/" + Year);
+        }
+        </script>
+    </body>
+</html>
